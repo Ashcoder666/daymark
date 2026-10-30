@@ -1,0 +1,1 @@
+*{box-sizing:border-box}html,body,#root{min-width:320px;min-height:100%;margin:0}body{font-family:"Segoe UI Variable Text",Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid #aa9bff;outline-offset:2px}

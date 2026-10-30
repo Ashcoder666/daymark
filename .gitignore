@@ -1,0 +1,64 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and generated web builds
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+
+# Local configuration (commit the blank example only)
+.env
+.env.*
+!.env.example
+*.local
+
+# Firebase deployment cache and local emulator output
+.firebase/
+firebase-debug.log*
+firestore-debug.log*
+ui-debug.log*
+
+# Rust/Tauri generated build output
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Signing keys, certificates, and service account credentials
+*.pem
+*.key
+*.p12
+*.pfx
+*.p8
+*.mobileprovision
+*.keystore
+*.jks
+*service-account*.json
+*serviceAccount*.json
+firebase-adminsdk*.json
+
+# Local data and backups
+daymark.json
+*.sqlite
+*.sqlite3
+*.db
+*.db-wal
+*.db-shm
+*.bak
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?

@@ -1,0 +1,57 @@
+html { background: #101116; -webkit-text-size-adjust: 100%; }
+body { margin: 0; overscroll-behavior-y: none; }
+html, body, #root { min-height: 100dvh; }
+.app { min-height: 100dvh; }
+.app.palette-ocean { --accent: #54c8e8; --accent-strong: #168ba9; --accent-dim: #173540; --theme-glow: #1aafdb20; }
+.app.palette-forest { --accent: #78d7aa; --accent-strong: #278764; --accent-dim: #19382f; --theme-glow: #4acf9920; }
+.app.palette-sunset { --accent: #ffb37c; --accent-strong: #c66a49; --accent-dim: #402c29; --theme-glow: #ff885520; }
+.app.palette-rose { --accent: #f4a2cf; --accent-strong: #b75d92; --accent-dim: #3b2639; --theme-glow: #f277bd20; }
+.app.palette-violet { --theme-glow: #9979ff20; }
+.app.light.palette-ocean { --accent: #117b99; --accent-dim: #e0f5fb; }
+.app.light.palette-forest { --accent: #247e59; --accent-dim: #e1f4e9; }
+.app.light.palette-sunset { --accent: #ad542e; --accent-dim: #fff0e6; }
+.app.light.palette-rose { --accent: #a23c7d; --accent-dim: #fbe5f2; }
+.app .main { background: radial-gradient(ellipse at top right, var(--theme-glow), transparent 65%), var(--bg); }
+.app .primary-btn, .app .auth-submit { background: linear-gradient(120deg, var(--accent-strong), var(--accent)); }
+.app .progress-fill, .app .brand-mark { background: linear-gradient(135deg, var(--accent), var(--accent-strong)); }
+.palette-picker { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 0 22px; }
+.palette-choice { border: 1px solid var(--border); background: var(--surface-2); color: var(--text); border-radius: 10px; padding: 10px; display: flex; align-items: center; gap: 7px; font-size: 12px; }
+.palette-choice.selected { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent-dim); }
+.palette-choice i { width: 18px; height: 18px; border-radius: 50%; background: linear-gradient(135deg,#b89cff,#6b54cf); }
+.palette-choice.ocean i { background: linear-gradient(135deg,#85e2ee,#1974b8); }
+.palette-choice.forest i { background: linear-gradient(135deg,#b4e892,#21836a); }
+.palette-choice.sunset i { background: linear-gradient(135deg,#ffd08b,#d76279); }
+.palette-choice.rose i { background: linear-gradient(135deg,#f6b5d2,#9654bc); }
+.auth-shell,.auth-loading { min-height: 100dvh; }
+@media (max-width: 760px) {
+  input, textarea, select, .auth-field input, .search-field input, .time-input { font-size: 16px !important; }
+  .web-app .shell { display: block; min-height: 100dvh; padding-bottom: calc(84px + env(safe-area-inset-bottom)); }
+  .web-app .sidebar { position: fixed; inset: auto 0 0; height: calc(72px + env(safe-area-inset-bottom)); padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); z-index: 40; border: 0; border-top: 1px solid var(--border); background: var(--sidebar); }
+  .web-app .sidebar > div:first-child { display: flex; width: 100%; }
+  .web-app .sidebar nav { display: contents; }
+  .web-app .sidebar .logo,.web-app .sidebar-bottom,.web-app .sidebar-label { display: none; }
+  .web-app .nav-item { flex: 1; height: 56px; padding: 5px 0; flex-direction: column; gap: 6px; font-size: 9px; border-radius: 10px; }
+  .web-app .nav-item span { display: block; }
+  .web-app .nav-item.active:before { display: none; }
+  .web-app .right-rail { display: grid; grid-template-columns: 1fr; padding: 0 16px 16px; border: 0; }
+  .web-app .content { padding: 24px 16px; }
+  .web-app .topbar { padding: 0 16px; padding-top: env(safe-area-inset-top); height: calc(54px + env(safe-area-inset-top)); }
+  .top-actions > i,.top-actions > .icon-btn { display: none; }
+  .page-heading { gap: 12px; flex-wrap: wrap; }
+  .section-heading { gap: 12px; flex-wrap: wrap; }
+  .section-actions { flex-direction: row; flex-wrap: wrap; }
+  .search-field { width: min(100%, 210px); }
+  .task-copy { min-width: 0; }
+  .task-copy strong { overflow-wrap: anywhere; }
+  .task-meta { flex-wrap: wrap; }
+  .setting-row { flex-wrap: wrap; padding: 12px 0; }
+  .setting-row strong { overflow-wrap: anywhere; }
+  .task-editor,.suggestion-modal { width: 100%; max-height: calc(100dvh - 24px); overflow-y: auto; padding: 22px; }
+  .modal-backdrop { padding: 12px; z-index: 100; }
+  .toast { max-width: calc(100vw - 32px); bottom: calc(90px + env(safe-area-inset-bottom)); }
+  .auth-panel { padding: 24px 16px; min-height: 100dvh; }
+  .auth-card { padding: 28px 22px; }
+  .auth-field > div { height: 50px; }
+  .auth-submit { height: 48px; font-size: 14px; }
+  .auth-reset { min-height: 44px; font-size: 12px; }
+}
